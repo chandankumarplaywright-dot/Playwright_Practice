@@ -8,14 +8,14 @@ test("Gmail" , async({page})=>{
     console.log(title);
     expect(title).toContain('Gmail');
 })
-test("Yahoo" , async({page})=>{
+test("'@regression' Yahoo" , async({page})=>{
 
     await page.goto("https://www.Yahoo.com/" ,{timeout:6000 , waitUntil:'load'});
     const title=await page.title();
     console.log(title);
     expect(title).toContain('Yahoo');
 })
-test("Outlook" , async({page})=>{
+test("'@smoke' Outlook" , async({page})=>{
 
     await page.goto("https://www.outlook.in/");
     await page.waitForLoadState();
